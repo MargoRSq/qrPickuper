@@ -21,11 +21,8 @@ app.add_middleware(
 )
 
 
-
 @app.get("/urls/{id}")
 async def get_sm(id: int):
-    return {"urls": [
-                     'https://t.me/iamsvyatoslav',
-                     'https://www.instagram.com/vi_latyshev/',
-                     'https://vk.com/inwhs'
-                    ]}
+    return {'data': {'telegram': 'https://t.me/iamsvyatoslav',
+                     'instragram': 'https://www.instagram.com/vi_latyshev/',
+                     'vk': 'https://vk.com/inwhs'}}
